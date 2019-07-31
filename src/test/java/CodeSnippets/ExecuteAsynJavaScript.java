@@ -1,6 +1,8 @@
 package CodeSnippets;
 
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 
@@ -19,6 +21,11 @@ public class ExecuteAsynJavaScript {
 			System.out.println("Timeout to load google page");
 		}
 
+		// Execute Asynchronous Java script with Selenium
+		long start = System.currentTimeMillis();
+		((JavascriptExecutor) driver).executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], 500);");
+		System.out.println("Elapsed time: " + (System.currentTimeMillis() - start));
+		
 		driver.quit();
 	}
 
