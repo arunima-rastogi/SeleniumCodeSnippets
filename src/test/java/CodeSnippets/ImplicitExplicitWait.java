@@ -25,6 +25,8 @@ public class ImplicitExplicitWait {
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		WebElement ele = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("q")));
 		ele.sendKeys("Implicit wait in selenium");
+		
+		
 
 		driver.quit();
 	}
