@@ -12,7 +12,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class getChromeDriver {
 
 	public WebDriver getDriver() {
-		System.setProperty("webdriver.chrome.driver", "c:/selenium/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\softwares\\Selenium jars\\chromedriver.exe");
 		String node_host = "127.0.0.1";
 		String node_port = "4444";
 		ChromeOptions options = new ChromeOptions();
