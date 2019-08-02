@@ -21,7 +21,7 @@ public class ScreenshotWithRemoteWebDriver {
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
 	     File screenshot = ((TakesScreenshot)augmentedDriver).
 	                            getScreenshotAs(OutputType.FILE);
-	     FileUtils.copyFile(screenshot, new File("c:\\\\SRTemp\\\\abc.png")); 
+	     FileUtils.copyFile(screenshot, new File("c:\\SRTemp\\abc.png")); 
 		driver.quit();
 	}
 }
