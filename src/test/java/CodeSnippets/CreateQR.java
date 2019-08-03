@@ -28,6 +28,7 @@ public class CreateQR {
 	public static void main(String[] args) {
 		generateQRCode();
 		try {
+			
 			System.out.println(readQRCode());
 		} catch (NotFoundException | IOException e) {
 			// TODO Auto-generated catch block
