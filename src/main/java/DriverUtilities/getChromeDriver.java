@@ -20,14 +20,15 @@ public class getChromeDriver {
 		System.setProperty("webdriver.chrome.driver", "C:\\softwares\\Selenium jars\\chromedriver.exe");
 		String node_host = "127.0.0.1";
 		String node_port = "4444";
-		if(!proxyEnabled) {
+		if(proxyEnabled) {
+			System.out.println(proxyEnabled+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 			proxy = getProxy();
 		}
 		ChromeOptions options = new ChromeOptions();
 		options.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
 		options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
 		options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-		if(!proxyEnabled) {
+		if(proxyEnabled) {
 			options.setCapability(CapabilityType.PROXY, proxy);
 		}
 		options.addArguments("--start-maximized");

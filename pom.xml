@@ -11,7 +11,7 @@
 		<testng.version>6.14.3</testng.version>
 		<jre.level>1.8</jre.level>
 		<jdk.level>1.8</jdk.level>
-		<proxyEnabled>false</proxyEnabled>
+		<proxyEnabled>true</proxyEnabled>
 	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
