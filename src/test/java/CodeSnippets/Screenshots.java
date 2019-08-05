@@ -15,6 +15,7 @@ public class Screenshots {
 		getChromeDriver obj = new getChromeDriver(); // This can be DI driver instead of new
 		WebDriver driver = obj.getDriver();
 		driver.get("http://www.defectracker.com");
+		
 		TakesScreenshot ts = (TakesScreenshot) driver; // Typecasted to TakesScreenshot
 		File src = ts.getScreenshotAs(OutputType.FILE); // This line of code is to store data in stack memory where file
 														// will not be stored permanently
