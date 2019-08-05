@@ -1,13 +1,8 @@
 package CodeSnippets;
 
-import java.io.File;
+
 import java.io.IOException;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
 import DriverUtilities.getChromeDriver;
 import DriverUtilities.setWindowSize;
 
@@ -22,13 +17,6 @@ public class ResizeScreenTest {
 
 		objW.setWindowSize(driver, 10, 20);
 		
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("$$$$$$$$$$$$$$$$$$$$$$$");
 		driver.quit();
 	}
 
