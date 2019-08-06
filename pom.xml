@@ -19,7 +19,7 @@
 		<gridHubUrl>http://127.0.0.1:4444/wd/hub</gridHubUrl>
 		<headless>false</headless>
 		<restartCount>5</restartCount>
-		
+
 	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
@@ -94,6 +94,12 @@
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
 			<version>7.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.9</version>
 		</dependency>
 
 	</dependencies>
