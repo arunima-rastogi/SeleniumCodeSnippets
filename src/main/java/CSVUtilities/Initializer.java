@@ -20,10 +20,14 @@ public class Initializer {
 				if (listOfFiles[i].isFile()) {
 					BufferedReader reader = new BufferedReader(new FileReader(path + "\\" + listOfFiles[i].getName()));
 					String line;
-					while ((line = reader.readLine()) != null) {
-						String[] arr = line.split("=");
-						mtafTestContext.put(arr[0], arr[1]);
+					if (listOfFiles[i].getName().contains("properties")) {
+
+						while ((line = reader.readLine()) != null) {
+							String[] arr = line.split("=");
+							mtafTestContext.put(arr[0], arr[1]);
+						}
 					}
+
 				}
 			}
 
