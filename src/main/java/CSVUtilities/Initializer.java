@@ -9,10 +9,10 @@ import java.util.Map;
 
 public class Initializer {
 
-	public static String path = System.getProperty("user.dir") + "\\configs";
-	private static Map<String, Object> mtafTestContext = new HashMap<>();
+	public String path = System.getProperty("user.dir") + "\\configs";
+	private Map<String, Object> mtafTestContext = new HashMap<>();
 
-	public static Map<String, Object> readMap() throws Exception {
+	public Map<String, Object> readMap() throws Exception {
 		try {
 			File folder = new File(path);
 			File[] listOfFiles = folder.listFiles();

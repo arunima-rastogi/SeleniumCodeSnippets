@@ -1,16 +1,14 @@
 package SeleniumGridUtilities;
 
-import java.io.IOException;
-import java.util.Map;
 
+import java.util.Map;
 import org.apache.log4j.Logger;
 import org.openqa.grid.common.RegistrationRequest;
 import org.openqa.grid.internal.utils.SelfRegisteringRemote;
 import org.openqa.grid.internal.utils.configuration.GridNodeConfiguration;
 import org.openqa.selenium.remote.server.SeleniumServer;
-
 import CSVUtilities.Initializer;
-import CSVUtilities.TestContext;
+
 
 public class NodeUtilities {
 	private static final Logger LOG = Logger.getLogger(NodeUtilities.class);
@@ -24,7 +22,6 @@ public class NodeUtilities {
 
 	public void configNode() {
 		if(((String) nodeProperties.get("Run")).equalsIgnoreCase("local")) {
-//		if (nodeProperties.get("Run").equalsIgnoreCase("local")) {
 			gridNodeConfig.hub = "http://" + nodeProperties.get("NodeHost") + ":"+nodeProperties.get("HubPort")+"/grid/register";
 			gridNodeConfig.host = (String) nodeProperties.get("NodeHost");
 			gridNodeConfig.port = Integer.parseInt((String) nodeProperties.get("NodePort"));
