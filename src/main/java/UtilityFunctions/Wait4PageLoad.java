@@ -1,11 +1,9 @@
 package UtilityFunctions;
 
-import java.util.function.Predicate;
+
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import DriverUtilities.getChromeDriver;
 
 public class Wait4PageLoad {
@@ -21,7 +19,13 @@ public class Wait4PageLoad {
 	}
 
 	static boolean WaitForPageLoad(WebDriver driver) {
+		WaitForAjaxCallToComplete(driver);
 		return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+	}
+	
+	static boolean WaitForAjaxCallToComplete(WebDriver driver) {
+		return ((Long)((JavascriptExecutor) driver).executeScript("return jQuery.active")== 0);
+		
 	}
 
 }
