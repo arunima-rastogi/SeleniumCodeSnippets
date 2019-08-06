@@ -1,4 +1,4 @@
-#CSS Selectors in Selenium
+# CSS Selectors in Selenium
 
 
 ## Locating Elements by Attribute
@@ -30,7 +30,8 @@ We can specify multiple attributes as
 
 
 ## Locating Child Element
-eg. <div id="child"><img src="./logo.png"></div>
+eg. we need to identify child element for following tag
+	"<div id="child"><img src="./logo.png"></div>"
 
 	css="div#child img"
 
