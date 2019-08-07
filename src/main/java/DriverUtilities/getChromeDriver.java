@@ -28,6 +28,8 @@ public class getChromeDriver {
 		options.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
 		options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
 		options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+		// Headless, disable image download during browser navigation
+		options.addArguments("--disable-gpu", "--blink-settings=imagesEnabled=false");  // "--headless" - another option 
 		if(proxyEnabled) {
 			options.setCapability(CapabilityType.PROXY, proxy);
 		}

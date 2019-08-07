@@ -37,7 +37,7 @@ public class HoverOver {
         //Mouseover visual
         String bgColor = td_Home.getCssValue("BACKGROUND-COLOR");
         System.out.println("Before hover: " + bgColor);
-        Thread.sleep(2000);
+        Thread.sleep(10000);
         mouseOverHome.perform();
 
         System.out.println("After hover: " + bgColor);
