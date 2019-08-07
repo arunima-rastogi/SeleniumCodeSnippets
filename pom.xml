@@ -19,7 +19,7 @@
 		<gridHubUrl>http://127.0.0.1:4444/wd/hub</gridHubUrl>
 		<headless>false</headless>
 		<restartCount>5</restartCount>
-
+		<aspectj.version>1.9.1</aspectj.version>
 	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
@@ -119,6 +119,11 @@
 			<artifactId>selenium-server</artifactId>
 			<version>3.141.59</version>
 		</dependency>
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.12.1</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -132,6 +137,26 @@
 					<target>1.8</target>
 					<compilerArgument>-Werror</compilerArgument>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.20</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>TestNG.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					<argLine>
+						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+					</argLine>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.aspectj</groupId>
+						<artifactId>aspectjweaver</artifactId>
+						<version>${aspectj.version}</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 		</plugins>
 	</build>
