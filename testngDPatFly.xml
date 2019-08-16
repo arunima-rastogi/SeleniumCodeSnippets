@@ -2,7 +2,7 @@
 <suite name="Suite">
 	<listeners>
 		<listener
-			class-name="testNG.Runtime.DataProviders.Examples.MyIAnnotationTransformer"></listener>
+			class-name="testNG.Runtime.DataProviders.Examples.DataProviderAnnotationTransformerListener"></listener>
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
