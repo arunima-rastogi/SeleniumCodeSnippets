@@ -19,7 +19,7 @@ public class UpdateJIRAComment {
 		HttpClient httpClient = HttpClientBuilder.create().build();
 
 		HttpPost request = new HttpPost("https://jira-compozed.allstate.com/rest/api/2/issue/FE-143/comment");
-		// payload
+		// JSON payload
 		StringEntity params = new StringEntity("{\"body\": \"Demo for team--.\"}");
 
 		request.addHeader("content-type", "application/json");
