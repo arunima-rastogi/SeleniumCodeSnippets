@@ -2,6 +2,7 @@ package CodeSnippets;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
@@ -42,18 +43,28 @@ public class PartialScreenshot {
 
 		int width = element.getSize().getWidth();
 		int height = element.getSize().getHeight();
-
+		
 		// Create Rectangle
         Rectangle rect = new Rectangle(width + 600, height + 600);
- 
         
 		BufferedImage img = ImageIO.read(screen);
 
 		BufferedImage dest = img.getSubimage(p.getX()-300, p.getY()-300, rect.width, rect.height);
+		
 
 		ImageIO.write(dest, "png", screen);
 
 		FileUtils.copyFile(screen, new File(screenShot));
+		
+// WebElement screenshot with Dimension
+		File screen1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		Point locationInIFrame = element.getLocation();
+    	Dimension d = element.getSize();
+		BufferedImage bImage = img.getSubimage(locationInIFrame.x, locationInIFrame.y, d.width, d.height);
+		ImageIO.write(bImage, "png", screen1);
+
+		FileUtils.copyFile(screen, new File(screenShot+"aaa"));
+		
 
 		driver.quit();
 	}
