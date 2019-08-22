@@ -11,8 +11,7 @@ import org.json.simple.parser.*;
 public class JSONReader {
 	public static void main(String[] args) throws Exception {
 		// parsing file "JSONExample.json"
-		Object obj = new JSONParser().parse(new FileReader("C:\\SRTemp\\aru\\githubworkspaces\\sample.json"));
-
+		Object obj = new JSONParser().parse(new FileReader("./Resources/Sample.json"));
 		// typecasting obj to JSONObject
 		JSONObject jo = (JSONObject) obj;
 
