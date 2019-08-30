@@ -11,7 +11,7 @@ public class HookableExample implements IHookable {
 
 	@Override
 	public void run(IHookCallBack callBack, ITestResult testResult) {
-		Object[] parms = callBack.getParameters();
+		Object[] parms = callBack.getParameters();  //get all parameters associated 
 		if (parms[0].equals("dummy")) {
 			System.out.println("Skip for parameter dummy");
 		} else {
