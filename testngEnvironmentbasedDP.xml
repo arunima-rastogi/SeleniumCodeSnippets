@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<method-selectors>
+			<method-selector>
+				<script language="beanshell">
+                <![CDATA[packageName = System.getProperty("packageName");
+                method.getDeclaringClass().getPackage().getName().contains(packageName);]]>
+				</script>
+			</method-selector>
+		</method-selectors>
+		<classes>
+			<class
+				name="testNG.EnvironmentBased.DataProvider.FirstTestClass" />
+			<class
+				name="testNG.EnvironmentBased.DataProvider.SecondTestClass" />
+		</classes>
+	</test>
+</suite>
+
