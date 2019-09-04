@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class ChromeWithProxy {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\srasz\\Desktop\\Selenium4mRemote\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Resources\\chromedriver.exe");
 		WebDriver driver;
 		String proxy = "127.0.0.1:5000";
 		
