@@ -5,7 +5,7 @@ import java.io.File;
 public class RecentlyModifiedFile {
 
 	public static void main(String[] args) {
-		File dir = getLatestCreatedDirectoryfromPath(System.getProperty("user.dir"));
+		File dir = getLatestCreatedDirectoryfromPath(System.getProperty("user.dir")+"\\test-output");
 
 		System.out.println(dir);
 		System.out.println("lastModified " + dir.lastModified());
