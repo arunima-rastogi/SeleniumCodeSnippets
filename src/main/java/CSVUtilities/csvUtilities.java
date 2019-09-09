@@ -121,5 +121,17 @@ public class csvUtilities {
 		return csvArrayObj;
 
 	}
+	
+	public boolean isNullOrEmpty(String string) {
+		return string == null || string.trim().isEmpty();
+	}
+
+	public boolean isNotNullAndNotEmpty(String string) {
+		return !(isNullOrEmpty(string));
+	}
+
+	public String getValueOrEmpty(String string) {
+		return isNotNullAndNotEmpty(string) ? string : "";
+	}
 
 }
