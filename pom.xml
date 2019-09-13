@@ -136,12 +136,7 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-server</artifactId>
-			<version>3.141.59</version>
-		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
@@ -183,13 +178,6 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 			<version>2.1</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-descriptions-javadoc -->
-		<dependency>
-			<groupId>io.qameta.allure</groupId>
-			<artifactId>allure-descriptions-javadoc</artifactId>
-			<version>2.12.1</version>
 		</dependency>
 
 
